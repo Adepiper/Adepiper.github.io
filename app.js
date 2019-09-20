@@ -4,6 +4,9 @@ const expressLayouts = require('express-ejs-layouts')
 const mongoose = require('mongoose')
 const flash = require('connect-flash')
 const session = require('express-session')
+const passport = require('passport')
+
+require('./config/passport')(passport)
 
 const db = require('./config/keys').MongoURI
 
@@ -24,6 +27,9 @@ app.use(
     })
   );
 
+  app.use(passport.initialize());
+app.use(passport.session());
+
   app.use(flash());
 
   app.use(function(req, res, next) {
@@ -35,7 +41,7 @@ app.use(
 
 app.use('/public', express.static('public'));
 
-app.use('/', require('./routes/index'))
+app.use('/', require('./index'))
 
 app.use('/users', require('./routes/user'))
  const PORT = process.env.PORT || 5000;
