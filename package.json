@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Adepiper/Team-Red-Wings.git"
+    "url": "https://github.com/Adepiper/Adepiper.github.io"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Adepiper/Team-Red-Wings/issues"
+    "url": "https://github.com/Adepiper/Adepiper.github.io/issues"
   },
-  "homepage": "https://github.com/Adepiper/Team-Red-Wings#readme",
+  "homepage": "https://github.com/Adepiper/Adepiper.github.io#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
