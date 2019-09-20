@@ -11,24 +11,24 @@
   <body>
    <div class="container">
        <div class="col-md-8 col-sm-10 col-lg-6 m-5" id="form-container">
-           <form action="" class="form-group">
+           <form action="register.php" class="form-group">
              <span><h2>Sign Up</h2></span>
              <div class="row">
               
                  <div class="col-lg-6">
-               <input  type="text" class="form-control my-2 p-2" placeholder="First Name" autofocus required> 
+               <input  type="text" name="FirstName"  class="form-control my-2 p-2" placeholder="First Name" autofocus required> 
                </div>
                <div class="col-lg-6">
-               <input  type="text" class="form-control my-2 p-2" placeholder="Last Name" required>
+               <input  type="text" name="LastName" class="form-control my-2 p-2" placeholder="Last Name" required>
                </div>
                </div>
-               <input type="Email" class="form-control my-2 p-2.5" placeholder="Email Address" required>
+               <input type="Email" name="email" class="form-control my-2 p-2.5" placeholder="Email Address" required>
                <div class="row">
                    <div class="col-lg-6">
-                     <input  type="password" class="form-control my-2 " placeholder="Password" required>
+                     <input  type="password" name="password" class="form-control my-2 " placeholder="Password" required>
                      </div>
                  <div class="col-lg-6">   
-               <input  type="password" class="form-control my-2 " placeholder="Confirm Password" required>
+               <input  type="password" name="password2" class="form-control my-2 " placeholder="Confirm Password" required>
                </div>
                </div>
                <button  type="submit" class="btn color-white text-align-center font-weight-bold form-control my-2">Sign Up</button>
