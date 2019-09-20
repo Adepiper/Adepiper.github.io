@@ -3,7 +3,7 @@
 session_start();
  // if user is not logged in, they cannot access this Page
   if (empty($_SESSION['email'])) {
-      header('location: index.html');
+      header('location: index.php');
       exit;
     }
     ?>
@@ -26,7 +26,7 @@ session_start();
 
 
 <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["email"]); ?></b>. Welcome to our site.</h1>
     </div>
     <p>
         <a href="logout.php" class="btn">Sign Out of Your Account</a>

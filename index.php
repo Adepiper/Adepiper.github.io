@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Store result
                 mysqli_stmt_store_result($stmt);
             
-                // Check if username exists, if yes then verify password
+                // Check if email exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $email, $hashed_password);
@@ -80,7 +80,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
           }
         
-        
+        }
+    
+
         
         // Close statement
         mysqli_stmt_close($stmt);
@@ -89,4 +91,38 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
         }
+    
 ?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Login</title>
+  </head>
+  <body>
+   <div class="container">
+       <div class="col-md-8 col-sm-10 col-lg-6 m-5" id="form-container">
+           <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="form-group">
+             <span><h2>Login</h2></span>
+               <input type="Email"  class="form-control my-3 p-2.5" placeholder="Email Address" name="email" required autofocus>
+               <input type="password"class="form-control mb-2 " placeholder="Password" name="password" required>
+               
+               <button  type="submit" class="btn color-white text-align-center font-weight-bold form-control my-2">Login to your account</button>
+               <span class="text-align-center"> <p> Don't have an a Red Wings account? <a href="register.php" class="text-decoration-none">Sign up</a> </p> </span>
+           </form>
+       </div>
+       
+   </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
