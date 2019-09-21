@@ -12,6 +12,17 @@ span h2 {
     color: #e72929;
     line-height: 105px;
 }
+span p {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+span #header{
+    font-weight: 20;
+    font-size: 50px;
+    color: #e72929;
+    line-height: 80px;
+}
 
 input{
     height: 65px !important;
