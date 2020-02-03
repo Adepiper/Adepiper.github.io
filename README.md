@@ -1,2 +1,0 @@
-# Team Red Wings
- HNG
