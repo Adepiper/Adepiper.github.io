@@ -235,11 +235,17 @@ function displayColors () {
         }).reduce((a,b)  => {
             return Math.max(a, b)
         })
+
+        let highestPaidDev = employees.filter((employee) => {
+            return employee.Job === 'Web Developer'
+        }).filter((employee) => {
+            return employee.salary === highestPaid
+        })
         console.log(job)
         console.log(jobAndPlace)
         console.log(age)
         console.log(active)
-        console.log(highestPaid)
+        console.log(highestPaidDev)
         }
 
 
