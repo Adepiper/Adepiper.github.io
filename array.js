@@ -183,7 +183,7 @@ function displayColors () {
     const Order = ['th', 'st', 'nd', 'rd']
      Colors.forEach((color, i) => {
         let order; 
-        switch (i) {
+        switch (i +1) {
             case 1: order = Order[1]
                 
                 break;
